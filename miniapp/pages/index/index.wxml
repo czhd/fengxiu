@@ -12,8 +12,16 @@
   </view>
 
   <view>
-  <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">授权手机号</button>
-
+  	<button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">授权手机号</button>
   </view>
-  <view class='enjoy' bindtap='share'>立即分享</view>
+  <view class='enjoy' bindtap='share'>
+	
+		发送订阅消息
+	
+  </view>
+  <view class="" bindtap='payment'>
+	
+		立即支付
+	 
+  </view>
 </view>
