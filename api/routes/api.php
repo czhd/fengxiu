@@ -20,3 +20,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get("v1/theme/by/names", "Apicontroller@theme");
 Route::get("v1/banner/name", "Apicontroller@banner");
 Route::get("v1/category/grid/all", "Apicontroller@grid");
+Route::get("v1/activity/name/a-2", "Apicontroller@activity");

@@ -2,6 +2,7 @@ import { config } from "../../config/config";
 import { Theme } from "../../models/theme";
 import { Banner } from "../../models/banner";
 import { Category } from "../../models/category";
+import { Activity } from "../../models/activity";
 
 // pages/home/home.js
 Page({
@@ -12,7 +13,8 @@ Page({
 	data: {
 		themeA: null,
 		bannerB: null,
-		grid: []
+		grid: [],
+		activity: null
 	},
 
 	/**
@@ -26,10 +28,12 @@ Page({
 		const themeA = await Theme.getHomeLocationA()
 		const bannerB = await Banner.getHomeLocationB()
 		const grid = await Category.getCategoryGrid()
+		const activity = await Activity.getHomeLocationD()
 		this.setData({
 			themeA,
 			bannerB,
-			grid
+			grid,
+			activity
 		})
 	},
  

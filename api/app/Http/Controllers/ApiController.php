@@ -125,4 +125,22 @@ class ApiController extends Controller
 		$grids = json_decode($grids, true);
 		return $grids;
 	}
+
+	/**
+	 * 领取优惠券
+	 */
+	public function activity()
+	{
+		$activity = '{
+			"id": 2,
+			"title": "夏日好礼送不停",
+			"entrance_img": "http://i2.sleeve.7yue.pro/m14.png",
+			"online": true,
+			"remark": "限服装、鞋、文具等商品",
+			"start_time": null,
+			"end_time": null
+		}';
+		$activity = json_decode($activity, true);
+		return $activity;
+	}
 }
