@@ -25,6 +25,9 @@ Page({
 	},
 
 	async initialData () {
+		// const themes = await Theme.getThemes()
+		// const themeA = themes.find(t => t.name === "t-1")
+		// const theme = new Theme()
 		const themeA = await Theme.getHomeLocationA()
 		const bannerB = await Banner.getHomeLocationB()
 		const grid = await Category.getCategoryGrid()
