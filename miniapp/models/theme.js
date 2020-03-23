@@ -7,25 +7,35 @@ class Theme {
 	static homeLocationF = "t-3"
 	static homeLocationH = "t-4"
 
-	static async getHomeLocationA () {
+	themes = []
+
+	async getThemes() {
+		this.themes = await Http.request({
+			url: "theme/by/names",
+			data: {
+				names: `${Theme.homeLocationA},${Theme.homeLocationE},${Theme.homeLocationF},${Theme.homeLocationH}`
+			}
+		})
+	}
+
+	async getHomeLocationA() {
+		return await this.themes.find(t => t.name === Theme.homeLocationA)
+	}
+
+	async getHomeLocationE() {
+		return await this.themes.find(t => t.name === Theme.homeLocationE)
+	}
+
+	// static async getHomeLocationA () {
 		// return await Http.request({
 		// 	url: 'theme/by/names',
 		// 	data: {
 		// 		names: "t-1"
 		// 	}
 		// })
-		return Theme.getThemes.find(t => t.name === 't-1')
-	}
+	// }
 
-	static async getThemes()
-	{
-		return await Http.request({
-			url: "theme/by/names",
-			data: {
-				names: `${Theme.homeLocaltionA},${Theme.homeLocaltionE}`
-			}
-		})
-	}
+	
 }
 
 export {
