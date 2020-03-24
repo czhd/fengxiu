@@ -81,13 +81,14 @@ Page({
   },
   payment () {
 	wx.request({
-		url: "https://artparty.eachigh.com/api/orders/payment",
+		url: "https://nineteen.lclook.com/api/orders/payment",
 		method: "POST",
 		header: {
 			token: "51c7ac5e53daf23a973111bb2f8f897f"
 		},
 		data: {
-			order_no: "202003181630033703"
+			order_no: "202003242014357903",
+			type: "wechat"
 		},
 		success (res) {
 			console.log(res.data)
@@ -102,6 +103,59 @@ Page({
 				},
 				fail (res) { }
 			  })
+		}
+	})
+  },
+  pay () {
+	wx.request({
+		url: "https://nineteen.lclook.com/api/recharges/1/pay",
+		method: "POST",
+		header: {
+			token: "51c7ac5e53daf23a973111bb2f8f897f"
+		},
+		data: {
+			
+		},
+		success (res) {
+			console.log(res)
+			wx.requestPayment({
+				timeStamp: res.data.data.timeStamp,
+				nonceStr: res.data.data.nonceStr,
+				package: res.data.data.package,
+				signType: 'MD5',
+				paySign: res.data.data.paySign,
+				success (res) { 
+					console.log(res)
+					// paySuccess()
+				},
+				fail (res) { }
+			  })
+		}
+	})
+  },
+  paySuccess () {
+	wx.request({
+		url: "https://nineteen.lclook.com/api/recharges/payment",
+		method: "POST",
+		header: {
+			token: "51c7ac5e53daf23a973111bb2f8f897f"
+		},
+		data: {
+			order_no: "V20200324184851542"
+		},
+		success (res) {
+			console.log(res.data)
+			// wx.requestPayment({
+			// 	timeStamp: res.data.data.timeStamp,
+			// 	nonceStr: res.data.data.nonceStr,
+			// 	package: res.data.data.package,
+			// 	signType: 'MD5',
+			// 	paySign: res.data.data.paySign,
+			// 	success (res) { 
+			// 		console.log(res)
+			// 	},
+			// 	fail (res) { }
+			//   })
 		}
 	})
   }

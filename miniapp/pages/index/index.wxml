@@ -24,4 +24,14 @@
 		立即支付
 	 
   </view>
+   <view class="" bindtap='pay'>
+	
+		立即充值
+	 
+  </view>
+  <view class="" bindtap='paySuccess'>
+	
+		支付成功
+	 
+  </view>
 </view>
