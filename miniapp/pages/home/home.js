@@ -16,7 +16,8 @@ Page({
 		bannerB: null,
 		grid: [],
 		activity: null,
-		themeSpu: null
+		themeSpu: null,
+		themeF: null
 	},
 
 	/**
@@ -30,19 +31,20 @@ Page({
 		const theme = new Theme()
 		await theme.getThemes()
 		const themeA = await theme.getHomeLocationA()
-		const themeE = await theme.getHomeLocationE()
 		const bannerB = await Banner.getHomeLocationB()
 		const grid = await Category.getCategoryGrid()
 		const activity = await Activity.getHomeLocationD()
 		const themeSpu = await Theme.getThemeByName()
-		console.log(themeSpu)
+		const themeE = await theme.getHomeLocationE()
+		const themeF = await theme.getHomeLocationF()
 		this.setData({
 			themeA,
-			themeE,
 			bannerB,
 			grid,
 			activity,
-			themeSpu
+			themeSpu,
+			themeE,
+			themeF
 		})
 	},
  
