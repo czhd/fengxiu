@@ -11,5 +11,6 @@
 	<image class="activity" src="{{activity.entrance_img}}" ></image>
 	<s-spu-scroll theme="{{themeSpu}}" wx:if="{{themeSpu.online === true}}"></s-spu-scroll>
 	<image class="quality" src="{{themeF.entrance_img}}" ></image>
+	<s-hot-list banner="{{bannerG}}"></s-hot-list>
 </view>
   
