@@ -30,6 +30,10 @@ class Theme {
 		return this.themes.find(t => t.name === Theme.homeLocationF)
 	}
 
+	getHomeLocationH() {
+		return this.themes.find(t => t.name === Theme.homeLocationH)
+	}
+
 	static getThemeByName() {
 		return Theme.getThemeSpu(Theme.homeLocationE)
 	}
