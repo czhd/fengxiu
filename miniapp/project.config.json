@@ -25,7 +25,7 @@
 		"nodeModules": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.10.2",
+	"libVersion": "2.10.3",
 	"appid": "wxbe01d607d47d091e",
 	"projectname": "fengxiu",
 	"debugOptions": {
