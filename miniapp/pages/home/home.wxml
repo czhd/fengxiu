@@ -16,7 +16,7 @@
 
 	<view class="spu-bottom">
 		<image class="title-spu-bottom" src="/imgs/home/title@interest.png"></image>
-		
+		<water-flow generic:l-water-flow="spu-preview"></water-flow>
 	</view>
 </view>
   
