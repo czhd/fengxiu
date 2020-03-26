@@ -5,7 +5,7 @@ class Paging {
 	count
 	lock = false
 	url
-	moreData
+	moreData = true
 	accumulator = []
 
 	_getLock () {
@@ -17,14 +17,14 @@ class Paging {
 	}
 
 	_releaseLock () {
-		this.lock = fasle
+		this.lock = false
 	}
 
 	constructor (req, count = 10, start = 0) {
 		this.count = count
 		this.start = start
 		this.req = req
-		this.url = url
+		this.url = req.url
 	}
 
 	async getMoreData () {
@@ -34,6 +34,7 @@ class Paging {
 		if (!this._getLock()) {
 			reutrn 
 		}
+		
 		const data = await this._getActualData()
 		this._releaseLock()
 		return data
@@ -77,10 +78,10 @@ class Paging {
 	_getCurrentReq () {
 		let url = this.url
 		const param = `start=${this.start}&count=${this.count}`
-		if (url.indexOf('?') !== -1) {
-			url = '?' + param
+		if (url.includes('?')) {
+			url += '&' + param
 		} else {
-			url = '&' + param
+			url += '?' + param
 		}
 		this.req.url = url
 		return this.req

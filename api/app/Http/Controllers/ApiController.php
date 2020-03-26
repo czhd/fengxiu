@@ -630,7 +630,7 @@ class ApiController extends Controller
 				}
 			]
 		}';
-		$spu = json_decode($spu, true);
-		return $spu;
+		$spus = json_decode($spus, true);
+		return $spus;
 	}
 }

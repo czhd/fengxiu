@@ -1,2 +1,3 @@
-<!--components/spu-preview/index.wxml-->
-<text>components/spu-preview/index.wxml</text>
+<view>
+	<image src="{{data.img}}"></image>
+</view>

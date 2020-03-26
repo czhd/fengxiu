@@ -4,6 +4,7 @@ import { Banner } from "../../models/banner";
 import { Category } from "../../models/category";
 import { Activity } from "../../models/activity";
 import { SpuPaging } from "../../models/spu-paging";
+import { Paging } from "../../utils/paging";
 
 // pages/home/home.js
 Page({
@@ -28,15 +29,17 @@ Page({
 	 */
 	async onLoad () {
 		await this.initialData()
+		await this.initialSpuBottom()
 	},
 
 	async initialSpuBottom () {
-		const paging = await SpuPaging.getLatestSpu()
-		const data = paging.getMoreData()
+		const paging =  SpuPaging.getLatestSpu()
+		const data = await paging.getMoreData()
 		if (!data) {
 			return 
 		}
-
+		console.log(data.items)
+		wx.lin.renderWaterFlow(data.items)
 	},
 
 	async initialData () {
