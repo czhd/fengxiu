@@ -1,6 +1,6 @@
 <wxs src="../../wxs/price.wxs" module="price"></wxs>
-<view class="container">
-	<image bind:load="autoImg" style="width: {{width}}rpx; height: {{height}}rpx;" class="img" src="{{data.img}}"></image>
+<view class="container" bind:tap="onSpuTap" data-id="{{data.id}}">
+	<image bind:load="onImgLoad" style="width: {{width}}rpx; height: {{height}}rpx;" class="img" src="{{data.img}}"></image>
 	<view class="inner-container">
 		<text class="title">{{data.title}}</text>
 		<view class="tags">
