@@ -11,7 +11,22 @@ Component({
 	 * 组件的初始数据
 	 */
 	data: {
+		tags: null
+	},
 
+	observers: {
+		"data": function (data) {
+			if (!data) {
+				return 
+			}
+			if (!data.tags) {
+				return 
+			}
+			const tags = data.tags.split("$")
+			this.setData({
+				tags
+			})
+		}
 	},
 
 	/**

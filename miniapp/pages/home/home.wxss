@@ -35,6 +35,9 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	margin-top: 20rpx;
+	padding-top: 34rpx;
+	background-color: #ffffff;
 }
 
 .title-spu-bottom {
