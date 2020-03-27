@@ -22,7 +22,8 @@ Page({
 		themeF: null,
 		bannerG: null,
 		themeH: null,
-		spuPaging: null
+		spuPaging: null,
+		loadType: "loading"
 	},
 
 	/**
@@ -40,7 +41,7 @@ Page({
 		if (!data) {
 			return 
 		}
-		console.log(data.items)
+		
 		wx.lin.renderWaterFlow(data.items)
 	},
 
@@ -110,10 +111,17 @@ Page({
 	onReachBottom: async function () {
 		const data = await this.data.spuPaging.getMoreData()
 		if (!data) {
+			this.setData({
+				loadType: "end"
+			})
 			return 
 		}
 		wx.lin.renderWaterFlow(data.items)
-	
+		if (!data.moreData) {
+			this.setData({
+				loadType: "end"
+			})
+		}
 	},
 
 	/**

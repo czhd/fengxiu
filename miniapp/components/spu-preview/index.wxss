@@ -32,9 +32,9 @@
 	flex-wrap: wrap;
 }
 
-.tags view {
+/* .tags view {
 	display: inline !important;
-}
+} */
 
 .l-tag {
 	background-color: #DCEBE6 !important;
