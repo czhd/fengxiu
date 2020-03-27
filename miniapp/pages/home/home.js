@@ -21,7 +21,8 @@ Page({
 		themeSpu: null,
 		themeF: null,
 		bannerG: null,
-		themeH: null
+		themeH: null,
+		spuPaging: null
 	},
 
 	/**
@@ -34,6 +35,7 @@ Page({
 
 	async initialSpuBottom () {
 		const paging =  SpuPaging.getLatestSpu()
+		this.data.spuPaging = paging
 		const data = await paging.getMoreData()
 		if (!data) {
 			return 
@@ -105,8 +107,13 @@ Page({
 	/**
 	 * 页面上拉触底事件的处理函数
 	 */
-	onReachBottom: function () {
-
+	onReachBottom: async function () {
+		const data = await this.data.spuPaging.getMoreData()
+		if (!data) {
+			return 
+		}
+		wx.lin.renderWaterFlow(data.items)
+	
 	},
 
 	/**

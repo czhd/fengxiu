@@ -33,6 +33,12 @@ Component({
 	 * 组件的方法列表
 	 */
 	methods: {
-
+		autoImg (event) {
+			const {width, height} = event.detail
+			this.setData({
+				width: 340,
+				height: height * 340 / width
+			})
+		}
 	}
 })
