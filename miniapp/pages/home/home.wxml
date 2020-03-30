@@ -1,4 +1,4 @@
-<l-loadmore show type="{{loadType}}" end-text="-- Chase --">
+<l-loadmore show type="{{loadType}}">
 	<view slot="content" class="container">
 		<image class="top-theme" src="{{themeA.entrance_img}}"></image>
 		<swiper class="swiper" indicator-dots indicator-active-color="#157658" autoplay="{{true}}" circular>

@@ -1,0 +1,7 @@
+<!--components/fence/index.wxml-->
+<view class="container">
+	<view class=""></view>
+	<block wx:for="{{}}" wx:key="{{index}}">
+		<view class=""></view>
+	</block>
+</view>

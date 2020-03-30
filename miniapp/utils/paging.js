@@ -20,7 +20,7 @@ class Paging {
 		this.lock = false
 	}
 
-	constructor (req, count = 10, start = 0) {
+	constructor (req, count = 15, start = 0) {
 		this.count = count
 		this.start = start
 		this.req = req
