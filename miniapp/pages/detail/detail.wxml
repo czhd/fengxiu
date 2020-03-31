@@ -1,1 +1,2 @@
 <!--pages/detail/detail.wxml-->
+<s-readlm spu="{{spu}}"></s-readlm>

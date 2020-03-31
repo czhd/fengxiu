@@ -2,11 +2,11 @@
 <view class="container">
 	<view>
 		<image src=""></image>
-		<l-price></l-price>
+		<!-- <l-price></l-price> -->
 		<text ></text>
 	</view>
-	<block wx:for="{{}}" wx:key="{{index}}">
-		<s-fence></s-fence>
+	<block wx:for="{{}}" wx:key="{{}}">
+		<!-- <s-fence ></s-fence> -->
 	</block>
 	<view class=""></view>
 	<view class=""></view>

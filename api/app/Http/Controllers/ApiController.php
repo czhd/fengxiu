@@ -637,7 +637,7 @@ class ApiController extends Controller
 	/**
 	 * 获取商品详情
 	 */
-	public function spuDetail()
+	public function spuDetail($id)
 	{
 		$spu = '{
 			"id":2,
@@ -805,7 +805,7 @@ class ApiController extends Controller
 			"sketch_spec_id":1,
 			"default_sku_id":2
 		}';
-		$spu = json_decode($spu. true);
+		$spu = json_decode($spu, true);
 		return $spu;
 	}
 

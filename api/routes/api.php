@@ -23,3 +23,4 @@ Route::get("v1/category/grid/all", "Apicontroller@grid");
 Route::get("v1/activity/name/a-2", "Apicontroller@activity");
 Route::get("v1/theme/name/{name}/with_spu", "Apicontroller@themeSpu");
 Route::get('v1/spu/latest', 'Apicontroller@spu');
+Route::get('v1/spu/id/{id}/detail', 'Apicontroller@spuDetail');

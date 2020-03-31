@@ -41,7 +41,6 @@ Component({
 			})
 		},
 		onSpuTap (event) {
-			console.log(event)
 			const id = event.currentTarget.dataset.id
 			wx.navigateTo({
 				url: `/pages/detail/detail?id=${id}`
