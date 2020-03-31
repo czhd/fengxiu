@@ -1,1 +1,28 @@
 /* components/fence/index.wxss */
+.row-container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.container {
+	margin-left: 30rpx;
+	margin-right: 30rpx;
+}
+
+.title {
+	font-size: 24rpx;
+	color: #858585;
+	margin: 26rpx 0;
+}
+
+.cell {
+	margin-bottom: 30rpx;
+	margin-right: 20rpx;
+}
+
+.hr {
+	/* border: 2rpx solid #E9E9E9; */
+	width: 690rpx;
+	height: 2rpx;
+	background-color: #E9E9E9;
+}

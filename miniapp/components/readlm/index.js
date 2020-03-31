@@ -1,4 +1,5 @@
 import { FenceGroup } from "../../models/fence-group"
+import { Judger } from "../../models/judger"
 
 // components/readlm/index.js
 Component({
@@ -13,7 +14,7 @@ Component({
 	 * 组件的初始数据
 	 */
 	data: {
-
+		fences: []
 	},
 
 	observers: {
@@ -23,12 +24,19 @@ Component({
 			}	
 			const fenceGroup = new FenceGroup(spu)
 			fenceGroup.initFences()
+			const judger = new Judger(fenceGroup)
+			judger.initPathDict()
+			this.bindInitFenceGroup(fenceGroup)
 		}
 	},
 	/**
 	 * 组件的方法列表
 	 */
 	methods: {
-
+		bindInitFenceGroup(fenceGroup) {
+			this.setData({
+				fences: fenceGroup.fences
+			})
+		}
 	}
 })

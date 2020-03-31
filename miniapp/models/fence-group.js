@@ -4,6 +4,7 @@ import { Fence } from "./fence"
 class FenceGroup {
 	spu
 	skuList = []
+	fences = []
 
 	constructor(spu) {
 		this.spu = spu
@@ -14,13 +15,12 @@ class FenceGroup {
 		const matrix = this._createMatrix(this.skuList)
 		const fences = []
 		const mt = matrix.transpose()
-		console.log(mt)
 		mt.forEach(mt => {
 			const fence = new Fence(mt)
 			fence.init()
 			fences.push(fence)
 		})
-		console.log(fences)
+		this.fences = fences
 
 	}
 

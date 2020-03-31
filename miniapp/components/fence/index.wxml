@@ -1,7 +1,14 @@
 <!--components/fence/index.wxml-->
 <view class="container">
-	<view class=""></view>
-	<block wx:for="{{}}" wx:key="{{index}}">
-		<view class=""></view>
-	</block>
+	<view class="title">
+		<text >{{fence.title}}</text>
+	</view>
+	<view class="row-container">
+		<block wx:for="{{fence.cells}}" wx:key="index">
+			<s-cell class="cell" cell="{{item}}"></s-cell>
+			
+		</block>
+		<view class="hr"></view>
+	</view>
+	<!-- <view class="hr"></view> -->
 </view>
