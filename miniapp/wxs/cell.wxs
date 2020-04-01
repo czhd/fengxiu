@@ -1,0 +1,18 @@
+function cellStatus(status) {
+	if (status === 'forbidden') {
+		return {
+			outer: 'forbidden',
+			inner: ''
+		}
+	}
+	if (status === 'selected') {
+		return {
+			outer: 's-outer',
+			inner: 's-inner'
+		}
+	}
+}
+
+module.exports = {
+	cellStatus: cellStatus
+}

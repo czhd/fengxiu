@@ -19,9 +19,11 @@ class SkuCode {
 
 		for (let i = 1; i <= length; i++) {
 			const segments = combination(specCodeArr, i)
-			this.totalSegments.push(segments)
+			segments = segments.map(s => {
+				return s.join('#')
+			})
+			this.totalSegments = this.totalSegments.concat(segments)
 		}
-		console.log(this.totalSegments)
 	}
 }
 

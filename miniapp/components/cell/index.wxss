@@ -1,12 +1,32 @@
 /* components/cell/index.wxss */
-.inner-container {
-	/* width: 60rpx; */
-	font-size: 24rpx;
+.container {
+	height: 60rpx;
+	border: 2rpx solid #333333;
 	color: #333333;
-	border:1px solid #333333;
+	padding: 2rpx;
+	box-sizing: border-box;
+}
+
+.inner-container {
+	height: 100%;
+	font-size: 24rpx;
 	background-color: #ffffff;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	padding: 16rpx 26rpx;
+	padding: 0rpx 26rpx;
+}
+
+.forbidden {
+	border: 2rpx dashed #bbbbbb;
+	color: #bbbbbb;
+}
+
+.s-outer {
+	border: 2rpx solid #157658;
+	background-color: #ffffff;
+}
+
+.s-inner {
+	background-color: #157658;
 }
