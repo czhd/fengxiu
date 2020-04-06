@@ -27,7 +27,7 @@ Component({
 			fenceGroup.initFences()
 			const judger = new Judger(fenceGroup)
 			this.data.judger = judger
-			judger.initPathDict()
+			// judger._initPathDict()
 			this.bindInitFenceGroup(fenceGroup)
 		}
 	},
